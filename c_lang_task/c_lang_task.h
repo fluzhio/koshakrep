@@ -91,13 +91,13 @@ void TEST_memcpy_and_memset(void) {
 
 void test_read_i_string_from_file(void) {
 	char* testbuf = (char*)malloc(30 * sizeof(char));
-	read_i_string_from_file("myfile2", 3, testbuf, 30);
+	read_i_string_from_file("сfile", 3, testbuf, 30);
 	printf("%s\n", testbuf);
 	free(testbuf);
 	testbuf = (char*)malloc(3 * sizeof(char));
-	read_i_string_from_file("myfile2", 3, testbuf, 3);
+	read_i_string_from_file("cfile", 3, testbuf, 3);
 	printf("%s\n", testbuf);
-	read_i_string_from_file("myfile2", 20, testbuf, 3);
+	read_i_string_from_file("cfile", 20, testbuf, 3);
 	printf("%s\n", testbuf);
 	free(testbuf);
 	printf("done\n");
